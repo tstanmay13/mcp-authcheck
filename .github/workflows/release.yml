@@ -1,0 +1,42 @@
+name: Release
+
+# Publishes to npm when a GitHub Release is published (or on manual dispatch).
+# Uses npm OIDC Trusted Publishing: npm trusts this specific repo+workflow via
+# a short-lived OIDC token, so there is NO npm token stored anywhere. It also
+# attaches build provenance automatically.
+#
+# One-time setup (do this once, then never touch a token again):
+#   1. npmjs.com -> the mcp-authcheck package -> Settings -> Trusted Publishers
+#   2. Add a GitHub Actions publisher:
+#        Organization/user: tstanmay13
+#        Repository:        mcp-authcheck
+#        Workflow filename: release.yml
+#        Environment:       (leave blank)
+#   3. Cut a release (see RELEASING.md). That's it.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # required for OIDC trusted publishing + provenance
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+          cache: npm
+      # Trusted publishing requires npm >= 11.5.1; the runner ships npm 10.
+      - run: npm install -g npm@latest
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      # No NODE_AUTH_TOKEN: authentication is via the OIDC token minted above.
+      - run: npm publish --provenance --access public
