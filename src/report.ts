@@ -111,7 +111,9 @@ function gradeSubtitle(report: Report): string {
     return c.blue("public server — no authorization enforced; auth conformance not applicable");
   }
   if (report.posture === "unknown") {
-    return c.yellow("could not determine auth posture");
+    return c.yellow(
+      "could not determine auth posture — the endpoint may not be an MCP server at this URL (unreachable or 404)",
+    );
   }
   const failed = report.results.filter((r) => r.status === "fail");
   const worstCrit = failed.find((r) => r.severity === "critical");

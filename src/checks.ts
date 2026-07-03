@@ -247,20 +247,27 @@ const b3_authServers: Check = (e) => {
   const prm = e.protectedResourceMetadata;
   if (!prm) return skip("B3", "PRM authorization_servers non-empty", "critical", SPEC_DISCOVERY);
   const arr = prm.doc.authorization_servers;
-  const ok = Array.isArray(arr) && arr.length > 0 && arr.every((x) => typeof x === "string");
+  const isArr = Array.isArray(arr);
+  const nonEmpty = isArr && arr.length > 0;
+  const allStrings = nonEmpty && arr.every((x) => typeof x === "string");
+  const ok = allStrings;
+  let message: string;
+  if (allStrings) message = `advertises ${(arr as string[]).length} authorization server(s)`;
+  else if (nonEmpty)
+    message =
+      "authorization_servers contains non-string entries — RFC 9728 requires an array of issuer identifier URL strings, not objects";
+  else message = "PRM is missing a non-empty authorization_servers array (MANDATORY per MCP)";
   return result({
     id: "B3",
     title: "PRM authorization_servers non-empty",
     status: ok ? "pass" : "fail",
     severity: "critical",
     requirement: "MUST",
-    message: ok
-      ? `advertises ${(arr as string[]).length} authorization server(s)`
-      : "PRM is missing a non-empty authorization_servers array (MANDATORY per MCP)",
+    message,
     reference: { spec: "MCP authorization-server-discovery", url: SPEC_DISCOVERY },
     evidence: { authorization_servers: arr },
     remediation:
-      "Include an `authorization_servers` array with at least one issuer identifier URL.",
+      "Include an `authorization_servers` array with at least one issuer identifier URL (string).",
   });
 };
 

@@ -73,9 +73,14 @@ describe("computeGrade", () => {
     expect(g.letter).toBe("A");
   });
 
-  it("empty / all-skip yields 0", () => {
-    expect(computeGrade([]).score).toBe(0);
-    expect(computeGrade([r("high", "skip")]).score).toBe(0);
+  it("empty / all-skip is N/A, not a false zero", () => {
+    expect(computeGrade([])).toEqual({ score: null, letter: "N/A" });
+    expect(computeGrade([r("high", "skip")])).toEqual({ score: null, letter: "N/A" });
+  });
+
+  it("public and unknown posture are N/A regardless of results", () => {
+    expect(computeGrade([r("critical", "fail")], "public").letter).toBe("N/A");
+    expect(computeGrade([r("critical", "fail")], "unknown").letter).toBe("N/A");
   });
 });
 

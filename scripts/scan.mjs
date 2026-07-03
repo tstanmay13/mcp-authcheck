@@ -36,6 +36,17 @@ const DEFAULT_TARGETS = [
   "https://mcp.webflow.com/sse",
   "https://mcp.hubspot.com/anthropic",
   "https://mcp.zapier.com/api/mcp/mcp",
+  "https://mcp.canva.com/mcp",
+  "https://mcp.cloudflare.com/mcp",
+  "https://mcp.close.com/mcp",
+  "https://mcp.wix.com/sse",
+  "https://mcp.prisma.io/mcp",
+  "https://mcp.buildkite.com/mcp",
+  "https://mcp.simplescraper.io/mcp",
+  "https://mcp.grafana.com/mcp",
+  "https://mcp.monday.com/sse",
+  "https://mcp.box.com/mcp",
+  "https://mcp.stytch.dev/mcp",
 ];
 
 const args = process.argv.slice(2);
@@ -46,13 +57,14 @@ for (let i = 0; i < args.length; i++) {
   else files.push(args[i]);
 }
 
-const targets =
+const rawTargets =
   files.length > 0
     ? files
         .flatMap((f) => readFileSync(f, "utf8").split("\n"))
         .map((s) => s.trim())
         .filter((s) => s && !s.startsWith("#"))
     : DEFAULT_TARGETS;
+const targets = [...new Set(rawTargets)];
 
 const reports = [];
 for (const target of targets) {
@@ -69,9 +81,11 @@ for (const target of targets) {
 
 // --- aggregate ---
 const reachable = reports.filter((r) => r.grade);
-// Public servers enforce no auth and are graded N/A; grade only protected ones.
-const graded = reachable.filter((r) => r.grade.letter !== "N/A");
-const publicServers = reachable.filter((r) => r.grade.letter === "N/A");
+// Only servers that enforce auth get a letter grade. Bucket the rest so a
+// public docs server or an unreachable/404 URL never counts as a failure.
+const graded = reachable.filter((r) => r.posture === "protected");
+const publicServers = reachable.filter((r) => r.posture === "public");
+const undetermined = reachable.filter((r) => r.posture === "unknown");
 const dist = { A: 0, B: 0, C: 0, D: 0, F: 0 };
 for (const r of graded) dist[r.grade.letter]++;
 
@@ -93,10 +107,12 @@ const summary = {
   reachable: reachable.length,
   gradedProtected: graded.length,
   publicNotGraded: publicServers.length,
+  undetermined: undetermined.length,
   unreachable: reports.length - reachable.length,
   gradeDistribution: dist,
   medianScore: median(graded.map((r) => r.grade.score).filter((s) => s !== null)),
   publicServers: publicServers.map((r) => r.target),
+  undeterminedServers: undetermined.map((r) => r.target),
   checkTally,
 };
 

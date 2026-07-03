@@ -34,9 +34,11 @@ const GATE: Partial<Record<Severity, Letter>> = {
  * could not run or a requirement that did not apply.
  */
 export function computeGrade(results: CheckResult[], posture: Posture = "protected"): Grade {
-  // A public server has opted out of authorization; the auth-conformance checks
-  // do not apply, so we return N/A rather than a misleading failing grade.
-  if (posture === "public") return { score: null, letter: "N/A" };
+  // Only servers that actually enforce authorization get a letter grade. A
+  // public server opted out of auth; an "unknown" server could not be reached
+  // as an MCP endpoint (e.g. every probe 404'd or the host was unreachable).
+  // Grading either would be a misleading failure, so both are N/A.
+  if (posture !== "protected") return { score: null, letter: "N/A" };
 
   let earned = 0;
   let applicable = 0;
@@ -58,7 +60,11 @@ export function computeGrade(results: CheckResult[], posture: Posture = "protect
     }
   }
 
-  const score = applicable === 0 ? 0 : Math.round((earned / applicable) * 100);
+  // No weighted checks ran at all (protected posture but every check skipped or
+  // errored): nothing to grade, so N/A rather than a false zero.
+  if (applicable === 0) return { score: null, letter: "N/A" };
+
+  const score = Math.round((earned / applicable) * 100);
   let letter = letterFor(score);
 
   // Apply gate caps: a gated failure cannot score better than its cap.

@@ -1,5 +1,9 @@
 # mcp-authcheck
 
+[![CI](https://github.com/tstanmay13/mcp-authcheck/actions/workflows/ci.yml/badge.svg)](https://github.com/tstanmay13/mcp-authcheck/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/mcp-authcheck)](https://www.npmjs.com/package/mcp-authcheck)
+[![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 **Grade any MCP server's OAuth implementation against the MCP authorization spec — in one command, without credentials.**
 
 MCP's authorization spec makes a server a full OAuth 2.1 resource server: it must challenge unauthenticated calls, serve Protected Resource Metadata (RFC 9728), point clients at an authorization server (RFC 8414), enforce PKCE, and validate token audience (RFC 8707). Most of that is invisible until a client breaks against it. `mcp-authcheck` probes a live server the way a spec-compliant client would and reports, check by check, where it conforms and where it doesn't.
@@ -38,32 +42,41 @@ target  https://mcp.intercom.com/mcp
 
 ## What it found across the public MCP ecosystem
 
-Scanning 20 well-known public MCP servers (2026-07-02, `scripts/scan.mjs`): **14 scored A, 2 C, 2 F, and 2 are public (no auth, not graded).** Median score among protected servers: **99/100.** Two independent product servers challenge for OAuth but serve **no Protected Resource Metadata at all** — a client that follows the spec's discovery flow cannot find their authorization server without hard-coding it.
+Scanning 31 well-known public MCP servers (2026-07-02, `scripts/scan.mjs`): of the **29 that enforce authorization, 20 scored A, 6 C, and 3 F** (median 99/100). The remaining two aren't graded — one is a public docs server (no auth), one couldn't be resolved as an MCP endpoint. **Roughly a third of auth-enforcing servers have at least one conformance gap**, and three serve broken or absent discovery metadata — meaning a spec-following client cannot locate their authorization server without hard-coding it.
 
 | Server | Grade | Score | Notes |
 |--------|:-----:|:-----:|-------|
+| huggingface.co | A | 99 | clean |
+| mcp.asana.com | A | 99 | clean |
+| mcp.buildkite.com | A | 99 | clean |
+| mcp.canva.com | A | 99 | clean |
+| mcp.grafana.com | A | 99 | clean |
+| mcp.hubspot.com | A | 99 | clean |
 | mcp.linear.app | A | 99 | clean |
+| mcp.monday.com | A | 99 | clean |
+| mcp.neon.tech | A | 99 | clean |
 | mcp.notion.com | A | 99 | clean |
 | mcp.sentry.dev | A | 99 | clean |
-| mcp.stripe.com | A | 99 | clean |
-| mcp.asana.com | A | 99 | clean |
-| mcp.neon.tech | A | 99 | clean |
 | mcp.squareup.com | A | 99 | clean |
-| huggingface.co | A | 99 | clean |
+| mcp.stripe.com | A | 99 | clean |
+| mcp.stytch.dev | A | 99 | clean |
 | mcp.webflow.com | A | 99 | clean |
-| mcp.hubspot.com | A | 99 | clean |
 | api.githubcopilot.com | A | 98 | clean |
+| mcp.cloudflare.com | A | 98 | clean |
 | mcp.paypal.com | A | 98 | clean |
 | mcp.context7.com | A | 97 | clean |
 | mcp.globalping.dev | A | 97 | clean |
+| mcp.box.com | C | 94 | AS metadata `issuer` (`https://api.box.com`) ≠ advertised issuer — RFC 8414 §3.3 |
+| mcp.close.com | C | 94 | AS metadata `issuer` (`https://api.close.com`) ≠ advertised issuer — RFC 8414 §3.3 |
 | mcp.vercel.com | C | 94 | AS metadata `issuer` (`https://vercel.com`) ≠ advertised issuer (`https://mcp.vercel.com`) — RFC 8414 §3.3 |
-| mcp.zapier.com | C | 93 | 401 challenge omits `resource_metadata` (PRM is reachable at the well-known path) |
+| mcp.wix.com | C | 93 | 401 challenge omits `resource_metadata` (PRM reachable at well-known path) |
+| mcp.zapier.com | C | 93 | 401 challenge omits `resource_metadata` (PRM reachable at well-known path) |
+| mcp.prisma.io | C | 87 | 401 challenge omits `resource_metadata`; AS metadata issuer mismatch (RFC 8414 §3.3) |
+| mcp.simplescraper.io | F | 61 | PRM served but malformed — missing `resource`; `authorization_servers` holds objects, not issuer strings (RFC 9728) |
 | mcp.atlassian.com | F | 37 | challenges for OAuth but serves no Protected Resource Metadata (RFC 9728) |
 | mcp.intercom.com | F | 37 | challenges for OAuth but serves no Protected Resource Metadata (RFC 9728) |
-| mcp.deepwiki.com | N/A | — | public server, no authorization enforced |
-| gitmcp.io | N/A | — | public server, no authorization enforced |
 
-Every non-A finding above was reproduced by hand against the live server. Reproduce the whole scan with `npm run build && node scripts/scan.mjs`. Full JSON in [`data/scan-2026-07-02.json`](data/scan-2026-07-02.json).
+Not graded: `mcp.deepwiki.com` (public — no auth enforced), `gitmcp.io` (could not be resolved as an MCP endpoint). Every non-A finding above was reproduced by hand against the live server. Reproduce the whole scan with `npm run build && node scripts/scan.mjs`. Full JSON in [`data/scan-2026-07-02.json`](data/scan-2026-07-02.json).
 
 ## What it checks
 
@@ -106,7 +119,7 @@ console.log(renderJson(report));
 
 ```bash
 npm install
-npm test          # 35 tests, no network
+npm test          # 36 tests, no network
 npm run build
 node dist/cli.js https://mcp.example.com/mcp
 ```
