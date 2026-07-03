@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ["20", "22"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      # Smoke-test the built CLI against a known-compliant public server.
+      # Non-blocking: it depends on a third party's uptime, so it informs but
+      # never fails the build. --strict exits non-zero only on critical/high.
+      - run: node dist/cli.js https://mcp.linear.app/mcp --strict
+        continue-on-error: true
+
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      # Fail only on advisories affecting shipped code. The one remaining
+      # low-severity dev advisory is esbuild's dev-server (build-time only,
+      # never shipped), so we gate at moderate for production deps.
+      - run: npm audit --omit=dev --audit-level=moderate

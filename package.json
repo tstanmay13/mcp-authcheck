@@ -1,0 +1,50 @@
+{
+  "name": "mcp-authcheck",
+  "version": "0.1.0",
+  "description": "Grade any MCP server against the MCP authorization spec (OAuth 2.1, RFC 9728/8414/8707). Read-only, non-destructive conformance checks.",
+  "type": "module",
+  "bin": {
+    "mcp-authcheck": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "start": "node dist/cli.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "oauth",
+    "oauth2",
+    "conformance",
+    "security",
+    "rfc9728",
+    "rfc8707",
+    "authorization",
+    "cli"
+  ],
+  "author": "Tanmay Singh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tstanmay13/mcp-authcheck.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^4.0.0"
+  }
+}
