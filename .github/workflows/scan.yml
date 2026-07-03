@@ -1,0 +1,41 @@
+name: Ecosystem scan
+
+# Keeps the published MCP ecosystem dataset current: re-scans the tracked list
+# of public MCP servers weekly, regenerates data/latest-scan.json + data/README.md,
+# and commits any changes. Servers fix (or regress) their OAuth over time; this
+# makes the dataset a living record rather than a one-off snapshot.
+
+on:
+  schedule:
+    - cron: "0 12 * * 1" # Mondays 12:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Scan the public MCP ecosystem
+        run: |
+          node scripts/scan.mjs --out data/latest-scan.json
+          node scripts/report-scan.mjs data/latest-scan.json
+      - name: Commit refreshed dataset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/; then
+            echo "no dataset changes"
+          else
+            git add data/
+            git commit -m "chore(data): refresh MCP ecosystem scan"
+            git push
+          fi
