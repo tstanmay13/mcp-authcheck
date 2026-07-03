@@ -1,6 +1,6 @@
 {
   "name": "mcp-authcheck",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Grade any MCP server against the MCP authorization spec (OAuth 2.1, RFC 9728/8414/8707). Read-only, non-destructive conformance checks.",
   "type": "module",
   "bin": {

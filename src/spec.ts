@@ -5,7 +5,7 @@
  * mandated discovery fallback order.
  */
 
-export const TOOL_VERSION = "0.1.0";
+export const TOOL_VERSION = "0.1.1";
 export const SPEC_VERSION = "2026-07-28";
 
 /** MCP protocol versions this tool knows about, newest first. */
