@@ -6,7 +6,9 @@ import type { CheckResult, CheckStatus, Report, Severity } from "./types.js";
  */
 
 const useColor =
-  process.stdout.isTTY && !process.env.NO_COLOR && process.env.TERM !== "dumb";
+  !process.env.NO_COLOR &&
+  process.env.TERM !== "dumb" &&
+  (!!process.env.FORCE_COLOR || process.stdout.isTTY);
 
 const c = {
   reset: paint("\x1b[0m"),

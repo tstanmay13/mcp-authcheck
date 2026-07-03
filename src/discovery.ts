@@ -168,6 +168,7 @@ export async function gather(
   return {
     target,
     origin,
+    specVersion: protocolVersion,
     probes,
     protectedResourceMetadata,
     authServerMetadata,

@@ -38,7 +38,7 @@ target  https://mcp.intercom.com/mcp
   2 pass · 2 fail · 1 warn · 4 skip · 0 error
 ```
 
-`--json` emits the full machine-readable report; `--strict` exits non-zero only on critical/high failures (drop it into CI to gate a release).
+`--json` emits the full machine-readable report; `--strict` exits non-zero only on critical/high failures (drop it into CI to gate a release); `--spec 2025-11-25` grades against an earlier revision of the spec. A recorded terminal session is in [`docs/demo.cast`](docs/demo.cast) (`asciinema play docs/demo.cast`).
 
 ## What it found across the public MCP ecosystem
 

@@ -67,6 +67,8 @@ export interface Evidence {
   target: string;
   /** Origin used for well-known discovery, e.g. https://host[:port]. */
   origin: string;
+  /** MCP spec revision the checks grade against (drives version-specific rules). */
+  specVersion: string;
   probes: Probe[];
   /** RFC 9728 Protected Resource Metadata, if discovered and parsed. */
   protectedResourceMetadata?: {

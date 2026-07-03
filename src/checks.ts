@@ -435,18 +435,22 @@ const cChecks: Check = (e) => {
       }),
     );
 
-    // C7: RFC 9207 iss support
+    // C7: RFC 9207 iss support. Only a SHOULD from the 2026-07-28 revision;
+    // under earlier revisions it is informational, not a deviation.
     const iss = doc.authorization_response_iss_parameter_supported === true;
+    const issExpected = e.specVersion >= "2026-07-28";
     out.push(
       result({
         id: `C7[${label}]`,
         title: "RFC 9207 issuer-response parameter supported",
-        status: iss ? "pass" : "warn",
+        status: iss ? "pass" : issExpected ? "warn" : "info",
         severity: "low",
-        requirement: "SHOULD",
+        requirement: issExpected ? "SHOULD" : "MAY",
         message: iss
           ? "advertises authorization_response_iss_parameter_supported"
-          : "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          : issExpected
+            ? "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)"
+            : "does not advertise RFC 9207 iss support (not required before the 2026-07-28 revision)",
         reference: { spec: "RFC 9207 §2.3", section: "2.3", url: RFC9207 },
         evidence: { authorization_response_iss_parameter_supported: doc.authorization_response_iss_parameter_supported },
       }),
@@ -577,18 +581,21 @@ const e2_legacyMethod: Check = (e) => {
   if (p?.error || status === undefined) {
     return skip("E2", "Rejects GET on the MCP endpoint (2026-07-28)", "low", SPEC_TRANSPORT);
   }
-  // Version-gated: pre-2026 servers legitimately support GET streams. We only
-  // note this as informational unless the server declared 2026-07-28.
+  // Version-gated: pre-2026 revisions legitimately support GET SSE streams, so
+  // the 405 expectation only applies when grading against 2026-07-28.
   const ok = status === 405;
+  const expected405 = e.specVersion >= "2026-07-28";
   return result({
     id: "E2",
     title: "Rejects GET on the MCP endpoint (2026-07-28)",
     status: ok ? "pass" : "info",
     severity: "low",
-    requirement: "SHOULD",
+    requirement: expected405 ? "SHOULD" : "MAY",
     message: ok
       ? "GET correctly rejected with 405"
-      : `GET returned ${status} — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)`,
+      : expected405
+        ? `GET returned ${status} — 2026-07-28 removed the GET stream, so 405 is expected`
+        : `GET returned ${status} — legal under ${e.specVersion} (GET SSE streams still supported)`,
     reference: { spec: "MCP streamable-http §Earlier Revisions", url: SPEC_TRANSPORT },
     evidence: { status },
   });

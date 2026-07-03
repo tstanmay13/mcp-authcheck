@@ -18,6 +18,8 @@
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit",
+    "scan": "node scripts/scan.mjs",
+    "cast": "node scripts/gen-cast.mjs",
     "start": "node dist/cli.js"
   },
   "keywords": [

@@ -29,7 +29,7 @@ export async function audit(
     origin: evidence.origin,
     timestamp: now.toISOString(),
     toolVersion: TOOL_VERSION,
-    specVersion: SPEC_VERSION,
+    specVersion: evidence.specVersion,
     posture: serverPosture,
     results,
     grade,

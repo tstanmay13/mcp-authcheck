@@ -49,6 +49,7 @@ function parseArgs(argv: string[]): Args {
       case "--timeout":
         args.timeoutMs = Number(argv[++i]) || undefined;
         break;
+      case "--spec":
       case "--protocol-version":
         args.protocolVersion = argv[++i];
         break;
@@ -75,7 +76,10 @@ OPTIONS
   --strict               Exit non-zero only on critical/high failures
                          (default: exit non-zero on any failure)
   --timeout <ms>         Per-request timeout (default 10000)
-  --protocol-version <v> MCP-Protocol-Version header to send
+  --spec <version>       MCP spec revision to grade against; also sent as the
+                         MCP-Protocol-Version header. Default ${SPEC_VERSION}.
+                         Use an earlier revision (e.g. 2025-11-25) to grade a
+                         server against the spec in force today.
                          (known: ${KNOWN_PROTOCOL_VERSIONS.join(", ")})
   -h, --help             Show this help
   --version              Print version

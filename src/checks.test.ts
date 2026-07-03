@@ -44,6 +44,7 @@ function compliantEvidence(): Evidence {
   return {
     target: "https://mcp.example.com/mcp",
     origin: "https://mcp.example.com",
+    specVersion: "2026-07-28",
     wwwAuthenticate: wwwAuth,
     protectedResourceMetadata: {
       url: "https://mcp.example.com/.well-known/oauth-protected-resource/mcp",
@@ -143,6 +144,7 @@ describe("runChecks — public server (no auth)", () => {
     const e: Evidence = {
       target: "https://public.example.com/mcp",
       origin: "https://public.example.com",
+      specVersion: "2026-07-28",
       wwwAuthenticate: [],
       authServerMetadata: [],
       probes: [
@@ -158,6 +160,21 @@ describe("runChecks — public server (no auth)", () => {
     expect(byId(results, "A2")?.status).toBe("skip");
     expect(byId(results, "B1")?.status).toBe("skip");
     expect(byId(results, "D1")?.status).toBe("skip");
+  });
+});
+
+describe("runChecks — spec-version sensitivity", () => {
+  it("C7 (RFC 9207) warns under 2026-07-28 but is informational under 2025-11-25", () => {
+    const e = compliantEvidence();
+    const doc = { ...AS_DOC };
+    delete (doc as Record<string, unknown>).authorization_response_iss_parameter_supported;
+    e.authServerMetadata = [{ issuer: "https://auth.example.com", url: "x", doc }];
+
+    e.specVersion = "2026-07-28";
+    expect(byId(runChecks(e), "C7")?.status).toBe("warn");
+
+    e.specVersion = "2025-11-25";
+    expect(byId(runChecks(e), "C7")?.status).toBe("info");
   });
 });
 
