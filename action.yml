@@ -1,0 +1,48 @@
+name: "mcp-authcheck"
+description: "Grade an MCP server's OAuth conformance against the MCP authorization spec and fail the build on serious violations."
+branding:
+  icon: "shield"
+  color: "green"
+
+inputs:
+  url:
+    description: "The MCP server URL to check (e.g. https://mcp.example.com/mcp)."
+    required: true
+  strict:
+    description: "If 'true', fail only on critical/high failures; otherwise fail on any failure."
+    required: false
+    default: "true"
+  min-grade:
+    description: "Fail if the grade is below this letter (A-F). Overrides strict when set. A public server always passes."
+    required: false
+  spec:
+    description: "MCP spec revision to grade against (e.g. 2026-07-28, 2025-11-25)."
+    required: false
+  timeout:
+    description: "Per-request timeout in milliseconds."
+    required: false
+    default: "10000"
+  version:
+    description: "npm version/tag of mcp-authcheck to run."
+    required: false
+    default: "latest"
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+    - name: Run mcp-authcheck
+      shell: bash
+      run: |
+        args=("${{ inputs.url }}" --timeout "${{ inputs.timeout }}")
+        [ -n "${{ inputs.spec }}" ] && args+=(--spec "${{ inputs.spec }}")
+        if [ -n "${{ inputs.min-grade }}" ]; then
+          args+=(--min-grade "${{ inputs.min-grade }}")
+        elif [ "${{ inputs.strict }}" = "true" ]; then
+          args+=(--strict)
+        fi
+        echo "npx mcp-authcheck@${{ inputs.version }} ${args[*]}"
+        npx -y "mcp-authcheck@${{ inputs.version }}" "${args[@]}"

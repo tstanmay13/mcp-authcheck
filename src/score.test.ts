@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { computeGrade, summarize } from "./score.js";
+import { computeGrade, summarize, gradeMeetsMin } from "./score.js";
 import type { CheckResult, Severity, CheckStatus } from "./types.js";
 
 function r(
@@ -81,6 +81,24 @@ describe("computeGrade", () => {
   it("public and unknown posture are N/A regardless of results", () => {
     expect(computeGrade([r("critical", "fail")], "public").letter).toBe("N/A");
     expect(computeGrade([r("critical", "fail")], "unknown").letter).toBe("N/A");
+  });
+});
+
+describe("gradeMeetsMin", () => {
+  it("passes when the grade is at or above the threshold", () => {
+    expect(gradeMeetsMin("A", "A")).toBe(true);
+    expect(gradeMeetsMin("A", "C")).toBe(true);
+    expect(gradeMeetsMin("C", "C")).toBe(true);
+  });
+  it("fails when below the threshold", () => {
+    expect(gradeMeetsMin("F", "B")).toBe(false);
+    expect(gradeMeetsMin("C", "B")).toBe(false);
+  });
+  it("a public server (N/A) always passes", () => {
+    expect(gradeMeetsMin("N/A", "A")).toBe(true);
+  });
+  it("is case-insensitive on the threshold", () => {
+    expect(gradeMeetsMin("B", "b")).toBe(true);
   });
 });
 

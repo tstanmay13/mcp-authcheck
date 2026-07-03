@@ -38,7 +38,20 @@ target  https://mcp.intercom.com/mcp
   2 pass · 2 fail · 1 warn · 4 skip · 0 error
 ```
 
-`--json` emits the full machine-readable report; `--strict` exits non-zero only on critical/high failures (drop it into CI to gate a release); `--spec 2025-11-25` grades against an earlier revision of the spec. A recorded terminal session is in [`docs/demo.cast`](docs/demo.cast) (`asciinema play docs/demo.cast`).
+`--json` emits the full machine-readable report; `--strict` exits non-zero only on critical/high failures; `--min-grade B` exits non-zero if the grade is below a threshold (a public server is N/A and always passes); `--spec 2025-11-25` grades against an earlier revision. A recorded terminal session is in [`docs/demo.cast`](docs/demo.cast) (`asciinema play docs/demo.cast`).
+
+## Use it in CI
+
+Gate your own MCP server's OAuth conformance on every deploy with the bundled GitHub Action:
+
+```yaml
+- uses: tstanmay13/mcp-authcheck@main
+  with:
+    url: https://mcp.your-company.com/mcp
+    min-grade: B          # or strict: "true" to fail only on critical/high
+```
+
+The step fails the build if the server drops below a B, so an OAuth regression (a broken PRM endpoint, a missing `resource_metadata`, PKCE disabled) is caught before it ships. Or run `npx mcp-authcheck <url> --min-grade B` directly.
 
 ## What it found across the public MCP ecosystem
 
@@ -119,7 +132,7 @@ console.log(renderJson(report));
 
 ```bash
 npm install
-npm test          # 36 tests, no network
+npm test          # 41 tests, no network
 npm run build
 node dist/cli.js https://mcp.example.com/mcp
 ```

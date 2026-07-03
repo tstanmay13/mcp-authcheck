@@ -95,6 +95,19 @@ function isWorse(a: Severity, b: Severity | undefined): boolean {
   return SEVERITY_ORDER.indexOf(a) > SEVERITY_ORDER.indexOf(b);
 }
 
+/**
+ * Whether a grade meets a minimum letter threshold, for `--min-grade` CI gating.
+ * A public server (N/A) is never graded for auth, so it always passes.
+ */
+export function gradeMeetsMin(letter: Grade["letter"], min: string): boolean {
+  if (letter === "N/A") return true;
+  const rank: Record<string, number> = { F: 0, D: 1, C: 2, B: 3, A: 4 };
+  const got = rank[letter];
+  const need = rank[min.toUpperCase()];
+  if (got === undefined || need === undefined) return true;
+  return got >= need;
+}
+
 export function summarize(results: CheckResult[]): Record<CheckStatus, number> {
   const s: Record<CheckStatus, number> = {
     pass: 0,

@@ -5,6 +5,7 @@ import {
   hasFailures,
   hasSeriousFailures,
 } from "./report.js";
+import { gradeMeetsMin } from "./score.js";
 import { TOOL_VERSION, SPEC_VERSION, KNOWN_PROTOCOL_VERSIONS } from "./spec.js";
 
 interface Args {
@@ -12,11 +13,14 @@ interface Args {
   json: boolean;
   verbose: boolean;
   strict: boolean;
+  minGrade?: string;
   timeoutMs?: number;
   protocolVersion?: string;
   help: boolean;
   version: boolean;
 }
+
+const GRADE_RANK: Record<string, number> = { F: 0, D: 1, C: 2, B: 3, A: 4 };
 
 function parseArgs(argv: string[]): Args {
   const args: Args = {
@@ -38,6 +42,9 @@ function parseArgs(argv: string[]): Args {
         break;
       case "--strict":
         args.strict = true;
+        break;
+      case "--min-grade":
+        args.minGrade = (argv[++i] ?? "").toUpperCase();
         break;
       case "-h":
       case "--help":
@@ -75,6 +82,8 @@ OPTIONS
   -v, --verbose          Show skipped checks, evidence, and spec references
   --strict               Exit non-zero only on critical/high failures
                          (default: exit non-zero on any failure)
+  --min-grade <A-F>      Exit non-zero if the grade is below this letter.
+                         A public server (N/A) always passes. Ideal for CI.
   --timeout <ms>         Per-request timeout (default 10000)
   --spec <version>       MCP spec revision to grade against; also sent as the
                          MCP-Protocol-Version header. Default ${SPEC_VERSION}.
@@ -128,6 +137,15 @@ async function main() {
     process.stdout.write(renderText(report, { verbose: args.verbose }));
   }
 
+  // --min-grade gates on the letter grade. A public server is N/A (not graded
+  // for auth) and always passes this gate.
+  if (args.minGrade) {
+    if (!(args.minGrade in GRADE_RANK)) {
+      process.stderr.write(`error: --min-grade must be one of A B C D F\n`);
+      return 2;
+    }
+    return gradeMeetsMin(report.grade.letter, args.minGrade) ? 0 : 1;
+  }
   if (args.strict) return hasSeriousFailures(report) ? 1 : 0;
   return hasFailures(report) ? 1 : 0;
 }
