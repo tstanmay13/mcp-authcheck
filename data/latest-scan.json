@@ -1,13 +1,13 @@
 {
   "summary": {
-    "scannedAt": "2026-07-03T01:49:49.356Z",
-    "toolVersion": "0.1.0",
+    "scannedAt": "2026-07-06T14:53:44.391Z",
+    "toolVersion": "0.1.1",
     "specVersion": "2026-07-28",
     "total": 31,
     "reachable": 31,
     "gradedProtected": 29,
-    "publicNotGraded": 1,
-    "undetermined": 1,
+    "publicNotGraded": 2,
+    "undetermined": 0,
     "unreachable": 0,
     "gradeDistribution": {
       "A": 20,
@@ -18,11 +18,10 @@
     },
     "medianScore": 99,
     "publicServers": [
-      "https://mcp.deepwiki.com/mcp"
-    ],
-    "undeterminedServers": [
+      "https://mcp.deepwiki.com/mcp",
       "https://gitmcp.io/docs"
     ],
+    "undeterminedServers": [],
     "checkTally": {
       "A1": {
         "pass": 29,
@@ -183,8 +182,8 @@
     {
       "target": "https://mcp.linear.app/mcp",
       "origin": "https://mcp.linear.app",
-      "timestamp": "2026-07-03T01:45:16.334Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:09.483Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -412,7 +411,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -457,7 +456,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -483,8 +482,8 @@
     {
       "target": "https://mcp.notion.com/mcp",
       "origin": "https://mcp.notion.com",
-      "timestamp": "2026-07-03T01:45:16.668Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:09.737Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -713,7 +712,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -758,7 +757,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -784,8 +783,8 @@
     {
       "target": "https://mcp.sentry.dev/mcp",
       "origin": "https://mcp.sentry.dev",
-      "timestamp": "2026-07-03T01:45:16.984Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:09.904Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -1014,7 +1013,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -1059,7 +1058,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -1085,8 +1084,8 @@
     {
       "target": "https://api.githubcopilot.com/mcp/",
       "origin": "https://api.githubcopilot.com",
-      "timestamp": "2026-07-03T01:45:17.812Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:10.066Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -1314,7 +1313,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -1358,7 +1357,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -1384,8 +1383,8 @@
     {
       "target": "https://mcp.stripe.com/",
       "origin": "https://mcp.stripe.com",
-      "timestamp": "2026-07-03T01:45:19.284Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:10.815Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -1612,7 +1611,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -1656,7 +1655,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -1682,8 +1681,8 @@
     {
       "target": "https://mcp.asana.com/sse",
       "origin": "https://mcp.asana.com",
-      "timestamp": "2026-07-03T01:45:20.267Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:11.302Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -1912,7 +1911,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -1957,7 +1956,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -1983,8 +1982,8 @@
     {
       "target": "https://mcp.atlassian.com/v1/sse",
       "origin": "https://mcp.atlassian.com",
-      "timestamp": "2026-07-03T01:45:21.040Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:11.597Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -2164,7 +2163,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -2190,8 +2189,8 @@
     {
       "target": "https://mcp.intercom.com/mcp",
       "origin": "https://mcp.intercom.com",
-      "timestamp": "2026-07-03T01:45:21.325Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:11.810Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -2373,7 +2372,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -2399,8 +2398,8 @@
     {
       "target": "https://mcp.vercel.com/",
       "origin": "https://mcp.vercel.com",
-      "timestamp": "2026-07-03T01:45:22.140Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:12.180Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -2628,7 +2627,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -2673,7 +2672,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -2699,8 +2698,8 @@
     {
       "target": "https://mcp.neon.tech/sse",
       "origin": "https://mcp.neon.tech",
-      "timestamp": "2026-07-03T01:45:22.895Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:12.528Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -2928,7 +2927,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -2973,7 +2972,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -2999,8 +2998,8 @@
     {
       "target": "https://mcp.paypal.com/mcp",
       "origin": "https://mcp.paypal.com",
-      "timestamp": "2026-07-03T01:45:23.233Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:12.701Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -3228,7 +3227,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -3272,7 +3271,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -3298,8 +3297,8 @@
     {
       "target": "https://mcp.squareup.com/sse",
       "origin": "https://mcp.squareup.com",
-      "timestamp": "2026-07-03T01:45:24.181Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:13.153Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -3528,7 +3527,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -3572,7 +3571,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -3598,8 +3597,8 @@
     {
       "target": "https://huggingface.co/mcp",
       "origin": "https://huggingface.co",
-      "timestamp": "2026-07-03T01:45:24.790Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:13.302Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -3827,7 +3826,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -3898,8 +3897,8 @@
     {
       "target": "https://mcp.context7.com/mcp",
       "origin": "https://mcp.context7.com",
-      "timestamp": "2026-07-03T01:45:25.806Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:13.613Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -4127,7 +4126,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -4200,8 +4199,8 @@
     {
       "target": "https://mcp.deepwiki.com/mcp",
       "origin": "https://mcp.deepwiki.com",
-      "timestamp": "2026-07-03T01:45:26.566Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:15.960Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "public",
       "results": [
@@ -4344,7 +4343,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 400 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 400 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -4370,21 +4369,25 @@
     {
       "target": "https://gitmcp.io/docs",
       "origin": "https://gitmcp.io",
-      "timestamp": "2026-07-03T01:49:39.858Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:37.453Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
-      "posture": "unknown",
+      "posture": "public",
       "results": [
         {
           "id": "A1",
           "title": "Rejects unauthenticated requests with 401",
-          "status": "error",
+          "status": "info",
           "severity": "critical",
           "requirement": "MUST",
-          "message": "could not reach endpoint: timeout after 15000ms",
+          "message": "server returns results to unauthenticated callers — it appears to be public (no authorization). The auth-conformance checks below do not apply.",
           "reference": {
             "spec": "MCP authorization §Token Handling",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization"
+          },
+          "evidence": {
+            "initStatus": 200,
+            "toolsStatus": 400
           }
         },
         {
@@ -4529,15 +4532,15 @@
         "fail": 0,
         "warn": 1,
         "skip": 8,
-        "error": 1,
-        "info": 0
+        "error": 0,
+        "info": 1
       }
     },
     {
       "target": "https://mcp.globalping.dev/sse",
       "origin": "https://mcp.globalping.dev",
-      "timestamp": "2026-07-03T01:49:40.573Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:38.376Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -4767,7 +4770,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -4812,7 +4815,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -4838,8 +4841,8 @@
     {
       "target": "https://mcp.webflow.com/sse",
       "origin": "https://mcp.webflow.com",
-      "timestamp": "2026-07-03T01:49:41.277Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:38.540Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -5068,7 +5071,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -5113,7 +5116,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -5139,8 +5142,8 @@
     {
       "target": "https://mcp.hubspot.com/anthropic",
       "origin": "https://mcp.hubspot.com",
-      "timestamp": "2026-07-03T01:49:42.045Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:38.948Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -5368,7 +5371,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -5412,7 +5415,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -5438,8 +5441,8 @@
     {
       "target": "https://mcp.zapier.com/api/mcp/mcp",
       "origin": "https://mcp.zapier.com",
-      "timestamp": "2026-07-03T01:49:43.165Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:39.506Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -5698,7 +5701,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -5742,7 +5745,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -5768,8 +5771,8 @@
     {
       "target": "https://mcp.canva.com/mcp",
       "origin": "https://mcp.canva.com",
-      "timestamp": "2026-07-03T01:49:43.447Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:39.611Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -5998,7 +6001,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -6043,7 +6046,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -6069,8 +6072,8 @@
     {
       "target": "https://mcp.cloudflare.com/mcp",
       "origin": "https://mcp.cloudflare.com",
-      "timestamp": "2026-07-03T01:49:43.880Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:39.958Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -6299,7 +6302,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -6345,7 +6348,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -6371,8 +6374,8 @@
     {
       "target": "https://mcp.close.com/mcp",
       "origin": "https://mcp.close.com",
-      "timestamp": "2026-07-03T01:49:44.678Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:41.341Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -6600,7 +6603,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -6645,7 +6648,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -6671,8 +6674,8 @@
     {
       "target": "https://mcp.wix.com/sse",
       "origin": "https://mcp.wix.com",
-      "timestamp": "2026-07-03T01:49:45.371Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:41.619Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -6942,7 +6945,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -6987,7 +6990,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -7013,8 +7016,8 @@
     {
       "target": "https://mcp.prisma.io/mcp",
       "origin": "https://mcp.prisma.io",
-      "timestamp": "2026-07-03T01:49:45.971Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:41.898Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -7274,7 +7277,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -7318,7 +7321,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -7344,8 +7347,8 @@
     {
       "target": "https://mcp.buildkite.com/mcp",
       "origin": "https://mcp.buildkite.com",
-      "timestamp": "2026-07-03T01:49:46.439Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:42.121Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -7573,7 +7576,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -7618,7 +7621,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -7644,8 +7647,8 @@
     {
       "target": "https://mcp.simplescraper.io/mcp",
       "origin": "https://mcp.simplescraper.io",
-      "timestamp": "2026-07-03T01:49:47.000Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:42.600Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -7855,7 +7858,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -7881,8 +7884,8 @@
     {
       "target": "https://mcp.grafana.com/mcp",
       "origin": "https://mcp.grafana.com",
-      "timestamp": "2026-07-03T01:49:47.496Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:42.895Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -8110,7 +8113,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -8155,7 +8158,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -8181,8 +8184,8 @@
     {
       "target": "https://mcp.monday.com/sse",
       "origin": "https://mcp.monday.com",
-      "timestamp": "2026-07-03T01:49:47.908Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:43.179Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -8411,7 +8414,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -8456,7 +8459,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -8482,8 +8485,8 @@
     {
       "target": "https://mcp.box.com/mcp",
       "origin": "https://mcp.box.com",
-      "timestamp": "2026-07-03T01:49:48.643Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:43.922Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -8711,7 +8714,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -8756,7 +8759,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
@@ -8782,8 +8785,8 @@
     {
       "target": "https://mcp.stytch.dev/mcp",
       "origin": "https://mcp.stytch.dev",
-      "timestamp": "2026-07-03T01:49:49.354Z",
-      "toolVersion": "0.1.0",
+      "timestamp": "2026-07-06T14:53:44.390Z",
+      "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
       "results": [
@@ -9011,7 +9014,7 @@
           "status": "warn",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "does not advertise RFC 9207 iss support (SHOULD; mix-up defense, trending to MUST)",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
           "reference": {
             "spec": "RFC 9207 §2.3",
             "section": "2.3",
@@ -9056,7 +9059,7 @@
           "status": "info",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 401 — expected 405 under 2026-07-28 (legal under earlier revisions that support GET streams)",
+          "message": "GET returned 401 — 2026-07-28 removed the GET stream, so 405 is expected",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"

@@ -1,9 +1,9 @@
-# Public MCP ecosystem scan — 2026-07-03
+# Public MCP ecosystem scan — 2026-07-06
 
-Produced by `node scripts/scan.mjs` with mcp-authcheck v0.1.0 against the MCP authorization spec 2026-07-28. Every check is read-only and non-destructive. This file is regenerated on a schedule by `.github/workflows/scan.yml`.
+Produced by `node scripts/scan.mjs` with mcp-authcheck v0.1.1 against the MCP authorization spec 2026-07-28. Every check is read-only and non-destructive. This file is regenerated on a schedule by `.github/workflows/scan.yml`.
 
 - **31** servers probed, **31** reachable
-- **29** enforce authorization (graded); **1** public (no auth, N/A); **1** could not be resolved as an MCP endpoint (N/A)
+- **29** enforce authorization (graded); **2** public (no auth, N/A); **0** could not be resolved as an MCP endpoint (N/A)
 - Grade distribution (auth-enforcing servers): A 20 · B 0 · C 6 · D 0 · F 3
 - Median score (auth-enforcing servers): **99/100**
 
