@@ -1,4 +1,4 @@
-# Public MCP ecosystem scan — 2026-07-13
+# Public MCP ecosystem scan — 2026-07-20
 
 Produced by `node scripts/scan.mjs` with mcp-authcheck v0.1.1 against the MCP authorization spec 2026-07-28. Every check is read-only and non-destructive. This file is regenerated on a schedule by `.github/workflows/scan.yml`.
 

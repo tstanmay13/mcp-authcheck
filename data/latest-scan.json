@@ -1,6 +1,6 @@
 {
   "summary": {
-    "scannedAt": "2026-07-13T13:59:23.482Z",
+    "scannedAt": "2026-07-20T13:44:43.285Z",
     "toolVersion": "0.1.1",
     "specVersion": "2026-07-28",
     "total": 31,
@@ -182,7 +182,7 @@
     {
       "target": "https://mcp.linear.app/mcp",
       "origin": "https://mcp.linear.app",
-      "timestamp": "2026-07-13T13:58:44.342Z",
+      "timestamp": "2026-07-20T13:44:05.355Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -482,7 +482,7 @@
     {
       "target": "https://mcp.notion.com/mcp",
       "origin": "https://mcp.notion.com",
-      "timestamp": "2026-07-13T13:58:44.515Z",
+      "timestamp": "2026-07-20T13:44:05.508Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -783,7 +783,7 @@
     {
       "target": "https://mcp.sentry.dev/mcp",
       "origin": "https://mcp.sentry.dev",
-      "timestamp": "2026-07-13T13:58:44.764Z",
+      "timestamp": "2026-07-20T13:44:05.696Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1084,7 +1084,7 @@
     {
       "target": "https://api.githubcopilot.com/mcp/",
       "origin": "https://api.githubcopilot.com",
-      "timestamp": "2026-07-13T13:58:45.657Z",
+      "timestamp": "2026-07-20T13:44:06.094Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1383,7 +1383,7 @@
     {
       "target": "https://mcp.stripe.com/",
       "origin": "https://mcp.stripe.com",
-      "timestamp": "2026-07-13T13:58:46.084Z",
+      "timestamp": "2026-07-20T13:44:07.257Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1681,7 +1681,7 @@
     {
       "target": "https://mcp.asana.com/sse",
       "origin": "https://mcp.asana.com",
-      "timestamp": "2026-07-13T13:58:47.721Z",
+      "timestamp": "2026-07-20T13:44:08.983Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1982,7 +1982,7 @@
     {
       "target": "https://mcp.atlassian.com/v1/sse",
       "origin": "https://mcp.atlassian.com",
-      "timestamp": "2026-07-13T13:58:48.183Z",
+      "timestamp": "2026-07-20T13:44:09.534Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2189,7 +2189,7 @@
     {
       "target": "https://mcp.intercom.com/mcp",
       "origin": "https://mcp.intercom.com",
-      "timestamp": "2026-07-13T13:58:48.308Z",
+      "timestamp": "2026-07-20T13:44:09.754Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2398,7 +2398,7 @@
     {
       "target": "https://mcp.vercel.com/",
       "origin": "https://mcp.vercel.com",
-      "timestamp": "2026-07-13T13:58:49.057Z",
+      "timestamp": "2026-07-20T13:44:10.348Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2698,7 +2698,7 @@
     {
       "target": "https://mcp.neon.tech/sse",
       "origin": "https://mcp.neon.tech",
-      "timestamp": "2026-07-13T13:58:49.822Z",
+      "timestamp": "2026-07-20T13:44:10.939Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2998,7 +2998,7 @@
     {
       "target": "https://mcp.paypal.com/mcp",
       "origin": "https://mcp.paypal.com",
-      "timestamp": "2026-07-13T13:58:49.967Z",
+      "timestamp": "2026-07-20T13:44:11.095Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3297,7 +3297,7 @@
     {
       "target": "https://mcp.squareup.com/sse",
       "origin": "https://mcp.squareup.com",
-      "timestamp": "2026-07-13T13:58:51.376Z",
+      "timestamp": "2026-07-20T13:44:11.677Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3597,7 +3597,7 @@
     {
       "target": "https://huggingface.co/mcp",
       "origin": "https://huggingface.co",
-      "timestamp": "2026-07-13T13:58:51.934Z",
+      "timestamp": "2026-07-20T13:44:11.978Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3897,7 +3897,7 @@
     {
       "target": "https://mcp.context7.com/mcp",
       "origin": "https://mcp.context7.com",
-      "timestamp": "2026-07-13T13:58:52.809Z",
+      "timestamp": "2026-07-20T13:44:12.521Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -4199,7 +4199,7 @@
     {
       "target": "https://mcp.deepwiki.com/mcp",
       "origin": "https://mcp.deepwiki.com",
-      "timestamp": "2026-07-13T13:58:53.088Z",
+      "timestamp": "2026-07-20T13:44:13.246Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "public",
@@ -4369,7 +4369,7 @@
     {
       "target": "https://gitmcp.io/docs",
       "origin": "https://gitmcp.io",
-      "timestamp": "2026-07-13T13:59:15.045Z",
+      "timestamp": "2026-07-20T13:44:34.967Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "public",
@@ -4539,7 +4539,7 @@
     {
       "target": "https://mcp.globalping.dev/sse",
       "origin": "https://mcp.globalping.dev",
-      "timestamp": "2026-07-13T13:59:15.565Z",
+      "timestamp": "2026-07-20T13:44:35.372Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -4841,7 +4841,7 @@
     {
       "target": "https://mcp.webflow.com/sse",
       "origin": "https://mcp.webflow.com",
-      "timestamp": "2026-07-13T13:59:15.715Z",
+      "timestamp": "2026-07-20T13:44:35.516Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5142,7 +5142,7 @@
     {
       "target": "https://mcp.hubspot.com/anthropic",
       "origin": "https://mcp.hubspot.com",
-      "timestamp": "2026-07-13T13:59:16.452Z",
+      "timestamp": "2026-07-20T13:44:36.184Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5441,7 +5441,7 @@
     {
       "target": "https://mcp.zapier.com/api/mcp/mcp",
       "origin": "https://mcp.zapier.com",
-      "timestamp": "2026-07-13T13:59:17.502Z",
+      "timestamp": "2026-07-20T13:44:37.001Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5771,7 +5771,7 @@
     {
       "target": "https://mcp.canva.com/mcp",
       "origin": "https://mcp.canva.com",
-      "timestamp": "2026-07-13T13:59:17.631Z",
+      "timestamp": "2026-07-20T13:44:37.185Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6072,7 +6072,7 @@
     {
       "target": "https://mcp.cloudflare.com/mcp",
       "origin": "https://mcp.cloudflare.com",
-      "timestamp": "2026-07-13T13:59:17.852Z",
+      "timestamp": "2026-07-20T13:44:37.489Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6374,7 +6374,7 @@
     {
       "target": "https://mcp.close.com/mcp",
       "origin": "https://mcp.close.com",
-      "timestamp": "2026-07-13T13:59:18.168Z",
+      "timestamp": "2026-07-20T13:44:38.492Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6674,7 +6674,7 @@
     {
       "target": "https://mcp.wix.com/sse",
       "origin": "https://mcp.wix.com",
-      "timestamp": "2026-07-13T13:59:18.524Z",
+      "timestamp": "2026-07-20T13:44:38.755Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6975,7 +6975,7 @@
     {
       "target": "https://mcp.prisma.io/mcp",
       "origin": "https://mcp.prisma.io",
-      "timestamp": "2026-07-13T13:59:19.320Z",
+      "timestamp": "2026-07-20T13:44:39.638Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7306,7 +7306,7 @@
     {
       "target": "https://mcp.buildkite.com/mcp",
       "origin": "https://mcp.buildkite.com",
-      "timestamp": "2026-07-13T13:59:20.020Z",
+      "timestamp": "2026-07-20T13:44:39.881Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7606,7 +7606,7 @@
     {
       "target": "https://mcp.simplescraper.io/mcp",
       "origin": "https://mcp.simplescraper.io",
-      "timestamp": "2026-07-13T13:59:21.553Z",
+      "timestamp": "2026-07-20T13:44:41.620Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7843,7 +7843,7 @@
     {
       "target": "https://mcp.grafana.com/mcp",
       "origin": "https://mcp.grafana.com",
-      "timestamp": "2026-07-13T13:59:22.374Z",
+      "timestamp": "2026-07-20T13:44:41.936Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8143,7 +8143,7 @@
     {
       "target": "https://mcp.monday.com/sse",
       "origin": "https://mcp.monday.com",
-      "timestamp": "2026-07-13T13:59:22.545Z",
+      "timestamp": "2026-07-20T13:44:42.145Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8444,7 +8444,7 @@
     {
       "target": "https://mcp.box.com/mcp",
       "origin": "https://mcp.box.com",
-      "timestamp": "2026-07-13T13:59:22.911Z",
+      "timestamp": "2026-07-20T13:44:42.831Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8744,7 +8744,7 @@
     {
       "target": "https://mcp.stytch.dev/mcp",
       "origin": "https://mcp.stytch.dev",
-      "timestamp": "2026-07-13T13:59:23.481Z",
+      "timestamp": "2026-07-20T13:44:43.285Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
