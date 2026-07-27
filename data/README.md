@@ -1,10 +1,10 @@
-# Public MCP ecosystem scan — 2026-07-20
+# Public MCP ecosystem scan — 2026-07-27
 
 Produced by `node scripts/scan.mjs` with mcp-authcheck v0.1.1 against the MCP authorization spec 2026-07-28. Every check is read-only and non-destructive. This file is regenerated on a schedule by `.github/workflows/scan.yml`.
 
 - **31** servers probed, **31** reachable
 - **29** enforce authorization (graded); **2** public (no auth, N/A); **0** could not be resolved as an MCP endpoint (N/A)
-- Grade distribution (auth-enforcing servers): A 21 · B 0 · C 5 · D 0 · F 3
+- Grade distribution (auth-enforcing servers): A 22 · B 0 · C 4 · D 0 · F 3
 - Median score (auth-enforcing servers): **99/100**
 
 Full per-server results and evidence: `latest-scan.json`.
@@ -21,12 +21,12 @@ Full per-server results and evidence: `latest-scan.json`.
 | B3 | PRM authorization_servers non-empty | 26 | 1 | 0 | 2 |
 | B4 | PRM recommended fields present | 25 | 0 | 0 | 2 |
 | C1 | AS metadata discoverable via mandated fallback order | 26 | 0 | 0 | 3 |
-| C2 | AS metadata issuer exactly matches | 22 | 4 | 0 | 0 |
+| C2 | AS metadata issuer exactly matches | 23 | 3 | 0 | 0 |
 | C3 | AS metadata required fields present | 26 | 0 | 0 | 0 |
 | C4 | PKCE S256 advertised | 26 | 0 | 0 | 0 |
 | C5 | All AS endpoints served over HTTPS | 26 | 0 | 0 | 0 |
 | C6 | Client registration capability advertised | 23 | 0 | 0 | 0 |
 | C7 | RFC 9207 issuer-response parameter supported | 0 | 0 | 26 | 0 |
 | D1 | Validates access tokens (rejects a bogus token) | 23 | 0 | 6 | 0 |
-| E1 | Validates Origin header (DNS-rebinding defense) | 27 | 0 | 2 | 0 |
+| E1 | Validates Origin header (DNS-rebinding defense) | 28 | 0 | 1 | 0 |
 | E2 | Rejects GET on the MCP endpoint (2026-07-28) | 2 | 0 | 0 | 0 |
