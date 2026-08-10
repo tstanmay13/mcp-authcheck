@@ -1,4 +1,4 @@
-# Public MCP ecosystem scan — 2026-08-03
+# Public MCP ecosystem scan — 2026-08-10
 
 Produced by `node scripts/scan.mjs` with mcp-authcheck v0.1.1 against the MCP authorization spec 2026-07-28. Every check is read-only and non-destructive. This file is regenerated on a schedule by `.github/workflows/scan.yml`.
 
@@ -27,6 +27,6 @@ Full per-server results and evidence: `latest-scan.json`.
 | C5 | All AS endpoints served over HTTPS | 26 | 0 | 0 | 0 |
 | C6 | Client registration capability advertised | 23 | 0 | 0 | 0 |
 | C7 | RFC 9207 issuer-response parameter supported | 2 | 0 | 24 | 0 |
-| D1 | Validates access tokens (rejects a bogus token) | 23 | 0 | 6 | 0 |
-| E1 | Validates Origin header (DNS-rebinding defense) | 28 | 0 | 1 | 0 |
+| D1 | Validates access tokens (rejects a bogus token) | 24 | 0 | 5 | 0 |
+| E1 | Validates Origin header (DNS-rebinding defense) | 29 | 0 | 0 | 0 |
 | E2 | Rejects GET on the MCP endpoint (2026-07-28) | 2 | 0 | 0 | 0 |
