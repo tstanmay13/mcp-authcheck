@@ -1,4 +1,4 @@
-# Public MCP ecosystem scan — 2026-08-24
+# Public MCP ecosystem scan — 2026-08-31
 
 Produced by `node scripts/scan.mjs` with mcp-authcheck v0.1.1 against the MCP authorization spec 2026-07-28. Every check is read-only and non-destructive. This file is regenerated on a schedule by `.github/workflows/scan.yml`.
 
@@ -21,7 +21,7 @@ Full per-server results and evidence: `latest-scan.json`.
 | B3 | PRM authorization_servers non-empty | 26 | 1 | 0 | 2 |
 | B4 | PRM recommended fields present | 25 | 0 | 0 | 2 |
 | C1 | AS metadata discoverable via mandated fallback order | 27 | 0 | 0 | 3 |
-| C2 | AS metadata issuer exactly matches | 24 | 3 | 0 | 0 |
+| C2 | AS metadata issuer exactly matches | 25 | 2 | 0 | 0 |
 | C3 | AS metadata required fields present | 27 | 0 | 0 | 0 |
 | C4 | PKCE S256 advertised | 27 | 0 | 0 | 0 |
 | C5 | All AS endpoints served over HTTPS | 27 | 0 | 0 | 0 |
