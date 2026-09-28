@@ -1,4 +1,4 @@
-# Public MCP ecosystem scan — 2026-09-21
+# Public MCP ecosystem scan — 2026-09-28
 
 Produced by `node scripts/scan.mjs` with mcp-authcheck v0.1.1 against the MCP authorization spec 2026-07-28. Every check is read-only and non-destructive. This file is regenerated on a schedule by `.github/workflows/scan.yml`.
 
@@ -15,7 +15,7 @@ Full per-server results and evidence: `latest-scan.json`.
 |-------|-------|:----:|:----:|:----:|:----:|
 | A1 | Rejects unauthenticated requests with 401 | 29 | 0 | 0 | 0 |
 | A2 | 401 challenge advertises resource_metadata (RFC 9728 §5.1) | 24 | 5 | 0 | 0 |
-| A3 | WWW-Authenticate advertises scope (optional) | 1 | 0 | 0 | 0 |
+| A3 | WWW-Authenticate advertises scope (optional) | 3 | 0 | 0 | 0 |
 | B1 | Protected Resource Metadata endpoint served | 27 | 2 | 0 | 0 |
 | B2 | PRM resource field present and canonical | 25 | 1 | 1 | 2 |
 | B3 | PRM authorization_servers non-empty | 26 | 1 | 0 | 2 |
@@ -26,7 +26,7 @@ Full per-server results and evidence: `latest-scan.json`.
 | C4 | PKCE S256 advertised | 27 | 0 | 0 | 0 |
 | C5 | All AS endpoints served over HTTPS | 27 | 0 | 0 | 0 |
 | C6 | Client registration capability advertised | 24 | 0 | 0 | 0 |
-| C7 | RFC 9207 issuer-response parameter supported | 8 | 0 | 19 | 0 |
+| C7 | RFC 9207 issuer-response parameter supported | 9 | 0 | 18 | 0 |
 | D1 | Validates access tokens (rejects a bogus token) | 24 | 0 | 5 | 0 |
 | E1 | Validates Origin header (DNS-rebinding defense) | 29 | 0 | 0 | 0 |
 | E2 | Rejects GET on the MCP endpoint (2026-07-28) | 2 | 0 | 0 | 0 |
