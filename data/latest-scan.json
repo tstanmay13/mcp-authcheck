@@ -1,6 +1,6 @@
 {
   "summary": {
-    "scannedAt": "2026-09-28T18:52:26.550Z",
+    "scannedAt": "2026-10-05T19:51:59.984Z",
     "toolVersion": "0.1.1",
     "specVersion": "2026-07-28",
     "total": 31,
@@ -10,11 +10,11 @@
     "undetermined": 0,
     "unreachable": 0,
     "gradeDistribution": {
-      "A": 22,
+      "A": 24,
       "B": 0,
-      "C": 3,
+      "C": 2,
       "D": 0,
-      "F": 4
+      "F": 3
     },
     "medianScore": 99,
     "publicServers": [
@@ -33,8 +33,8 @@
         "title": "Rejects unauthenticated requests with 401"
       },
       "A2": {
-        "pass": 24,
-        "fail": 5,
+        "pass": 25,
+        "fail": 4,
         "warn": 0,
         "skip": 0,
         "error": 0,
@@ -42,17 +42,17 @@
         "title": "401 challenge advertises resource_metadata (RFC 9728 §5.1)"
       },
       "A3": {
-        "pass": 3,
+        "pass": 4,
         "fail": 0,
         "warn": 0,
         "skip": 0,
         "error": 0,
-        "info": 26,
+        "info": 25,
         "title": "WWW-Authenticate advertises scope (optional)"
       },
       "B1": {
-        "pass": 27,
-        "fail": 2,
+        "pass": 28,
+        "fail": 1,
         "warn": 0,
         "skip": 0,
         "error": 0,
@@ -60,44 +60,44 @@
         "title": "Protected Resource Metadata endpoint served"
       },
       "B2": {
-        "pass": 25,
+        "pass": 26,
         "fail": 1,
         "warn": 1,
-        "skip": 2,
+        "skip": 1,
         "error": 0,
         "info": 0,
         "title": "PRM resource field present and canonical"
       },
       "B3": {
-        "pass": 26,
+        "pass": 27,
         "fail": 1,
         "warn": 0,
-        "skip": 2,
+        "skip": 1,
         "error": 0,
         "info": 0,
         "title": "PRM authorization_servers non-empty"
       },
       "B4": {
-        "pass": 25,
+        "pass": 26,
         "fail": 0,
         "warn": 0,
-        "skip": 2,
+        "skip": 1,
         "error": 0,
         "info": 2,
         "title": "PRM recommended fields present"
       },
       "C1": {
-        "pass": 27,
+        "pass": 28,
         "fail": 0,
         "warn": 0,
-        "skip": 3,
+        "skip": 2,
         "error": 0,
         "info": 0,
         "title": "AS metadata discoverable via mandated fallback order"
       },
       "C2": {
-        "pass": 25,
-        "fail": 2,
+        "pass": 27,
+        "fail": 1,
         "warn": 0,
         "skip": 0,
         "error": 0,
@@ -105,7 +105,7 @@
         "title": "AS metadata issuer exactly matches"
       },
       "C3": {
-        "pass": 27,
+        "pass": 28,
         "fail": 0,
         "warn": 0,
         "skip": 0,
@@ -114,7 +114,7 @@
         "title": "AS metadata required fields present"
       },
       "C4": {
-        "pass": 27,
+        "pass": 28,
         "fail": 0,
         "warn": 0,
         "skip": 0,
@@ -123,7 +123,7 @@
         "title": "PKCE S256 advertised"
       },
       "C5": {
-        "pass": 27,
+        "pass": 28,
         "fail": 0,
         "warn": 0,
         "skip": 0,
@@ -132,7 +132,7 @@
         "title": "All AS endpoints served over HTTPS"
       },
       "C6": {
-        "pass": 24,
+        "pass": 25,
         "fail": 0,
         "warn": 0,
         "skip": 0,
@@ -143,7 +143,7 @@
       "C7": {
         "pass": 9,
         "fail": 0,
-        "warn": 18,
+        "warn": 19,
         "skip": 0,
         "error": 0,
         "info": 0,
@@ -182,7 +182,7 @@
     {
       "target": "https://mcp.linear.app/mcp",
       "origin": "https://mcp.linear.app",
-      "timestamp": "2026-09-28T18:51:49.427Z",
+      "timestamp": "2026-10-05T19:51:25.227Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -484,7 +484,7 @@
     {
       "target": "https://mcp.notion.com/mcp",
       "origin": "https://mcp.notion.com",
-      "timestamp": "2026-09-28T18:51:49.590Z",
+      "timestamp": "2026-10-05T19:51:25.733Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -785,7 +785,7 @@
     {
       "target": "https://mcp.sentry.dev/mcp",
       "origin": "https://mcp.sentry.dev",
-      "timestamp": "2026-09-28T18:51:49.854Z",
+      "timestamp": "2026-10-05T19:51:25.952Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1087,7 +1087,7 @@
     {
       "target": "https://api.githubcopilot.com/mcp/",
       "origin": "https://api.githubcopilot.com",
-      "timestamp": "2026-09-28T18:51:50.012Z",
+      "timestamp": "2026-10-05T19:51:26.125Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1388,7 +1388,7 @@
     {
       "target": "https://mcp.stripe.com/",
       "origin": "https://mcp.stripe.com",
-      "timestamp": "2026-09-28T18:51:50.801Z",
+      "timestamp": "2026-10-05T19:51:26.764Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1687,7 +1687,7 @@
     {
       "target": "https://mcp.asana.com/sse",
       "origin": "https://mcp.asana.com",
-      "timestamp": "2026-09-28T18:51:51.389Z",
+      "timestamp": "2026-10-05T19:51:27.207Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1988,7 +1988,7 @@
     {
       "target": "https://mcp.atlassian.com/v1/sse",
       "origin": "https://mcp.atlassian.com",
-      "timestamp": "2026-09-28T18:51:51.580Z",
+      "timestamp": "2026-10-05T19:51:27.445Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2195,7 +2195,7 @@
     {
       "target": "https://mcp.intercom.com/mcp",
       "origin": "https://mcp.intercom.com",
-      "timestamp": "2026-09-28T18:51:51.708Z",
+      "timestamp": "2026-10-05T19:51:27.592Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2219,60 +2219,26 @@
         {
           "id": "A2",
           "title": "401 challenge advertises resource_metadata (RFC 9728 §5.1)",
-          "status": "fail",
+          "status": "pass",
           "severity": "critical",
           "requirement": "MUST",
-          "message": "a Bearer challenge is present but omits resource_metadata, and no PRM is served — clients cannot discover authorization",
+          "message": "challenge advertises resource_metadata (https://mcp.intercom.com/.well-known/oauth-protected-resource/mcp)",
           "reference": {
             "spec": "RFC 9728 §5.1",
             "section": "5.1",
             "url": "https://datatracker.ietf.org/doc/html/rfc9728"
           },
           "evidence": {
-            "challenges": [
-              {
-                "scheme": "Bearer",
-                "params": {
-                  "realm": "OAuth",
-                  "error": "invalid_token",
-                  "error_description": "Missing or invalid access token"
-                }
-              },
-              {
-                "scheme": "Bearer",
-                "params": {
-                  "realm": "OAuth",
-                  "error": "invalid_token",
-                  "error_description": "Missing or invalid access token"
-                }
-              },
-              {
-                "scheme": "Bearer",
-                "params": {
-                  "realm": "OAuth",
-                  "error": "invalid_token",
-                  "error_description": "Missing or invalid access token"
-                }
-              },
-              {
-                "scheme": "Bearer",
-                "params": {
-                  "realm": "OAuth",
-                  "error": "invalid_token",
-                  "error_description": "Missing or invalid access token"
-                }
-              }
-            ]
-          },
-          "remediation": "Add resource_metadata=\"<PRM URL>\" to the 401 Bearer challenge."
+            "resource_metadata": "https://mcp.intercom.com/.well-known/oauth-protected-resource/mcp"
+          }
         },
         {
           "id": "A3",
           "title": "WWW-Authenticate advertises scope (optional)",
-          "status": "info",
+          "status": "pass",
           "severity": "info",
           "requirement": "MAY",
-          "message": "no scope hint in challenge (optional per RFC 6750 §3)",
+          "message": "advertises scope=\"mcp\"",
           "reference": {
             "spec": "RFC 6750 §3",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization"
@@ -2281,64 +2247,190 @@
         {
           "id": "B1",
           "title": "Protected Resource Metadata endpoint served",
-          "status": "fail",
+          "status": "pass",
           "severity": "critical",
           "requirement": "MUST",
-          "message": "no Protected Resource Metadata document found at the advertised or well-known URL",
+          "message": "PRM served at https://mcp.intercom.com/.well-known/oauth-protected-resource/mcp",
           "reference": {
             "spec": "RFC 9728 §3",
             "section": "3",
             "url": "https://datatracker.ietf.org/doc/html/rfc9728"
+          },
+          "evidence": {
+            "url": "https://mcp.intercom.com/.well-known/oauth-protected-resource/mcp"
           },
           "remediation": "Serve RFC 9728 metadata (200 application/json) at /.well-known/oauth-protected-resource."
         },
         {
           "id": "B2",
           "title": "PRM resource field present and canonical",
-          "status": "skip",
+          "status": "pass",
           "severity": "high",
           "requirement": "MUST",
-          "message": "prerequisite not met (no protected-resource metadata to evaluate)",
+          "message": "resource matches the server URI (https://mcp.intercom.com/mcp)",
           "reference": {
-            "spec": "n/a",
+            "spec": "RFC 9728 §2",
             "url": "https://datatracker.ietf.org/doc/html/rfc9728"
+          },
+          "evidence": {
+            "resource": "https://mcp.intercom.com/mcp",
+            "target": "https://mcp.intercom.com/mcp"
           }
         },
         {
           "id": "B3",
           "title": "PRM authorization_servers non-empty",
-          "status": "skip",
+          "status": "pass",
           "severity": "critical",
           "requirement": "MUST",
-          "message": "prerequisite not met (no protected-resource metadata to evaluate)",
+          "message": "advertises 1 authorization server(s)",
           "reference": {
-            "spec": "n/a",
+            "spec": "MCP authorization-server-discovery",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization/authorization-server-discovery"
-          }
+          },
+          "evidence": {
+            "authorization_servers": [
+              "https://mcp.intercom.com"
+            ]
+          },
+          "remediation": "Include an `authorization_servers` array with at least one issuer identifier URL (string)."
         },
         {
           "id": "B4",
           "title": "PRM recommended fields present",
-          "status": "skip",
-          "severity": "low",
-          "requirement": "MUST",
-          "message": "prerequisite not met (no protected-resource metadata to evaluate)",
+          "status": "pass",
+          "severity": "info",
+          "requirement": "SHOULD",
+          "message": "present: scopes_supported, bearer_methods_supported; absent: resource_name, resource_documentation, jwks_uri, resource_signing_alg_values_supported, dpop_bound_access_tokens_required",
           "reference": {
-            "spec": "n/a",
+            "spec": "RFC 9728 §2",
             "url": "https://datatracker.ietf.org/doc/html/rfc9728"
+          },
+          "evidence": {
+            "present": [
+              "scopes_supported",
+              "bearer_methods_supported"
+            ],
+            "missing": [
+              "resource_name",
+              "resource_documentation",
+              "jwks_uri",
+              "resource_signing_alg_values_supported",
+              "dpop_bound_access_tokens_required"
+            ]
           }
         },
         {
-          "id": "C1",
-          "title": "AS metadata discoverable",
-          "status": "skip",
+          "id": "C1[mcp.intercom.com]",
+          "title": "AS metadata discoverable via mandated fallback order",
+          "status": "pass",
           "severity": "critical",
           "requirement": "MUST",
-          "message": "prerequisite not met (no protected-resource metadata to evaluate)",
+          "message": "discovered at https://mcp.intercom.com/.well-known/oauth-authorization-server",
           "reference": {
-            "spec": "n/a",
+            "spec": "MCP authorization-server-discovery",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization/authorization-server-discovery"
+          },
+          "evidence": {
+            "issuer": "https://mcp.intercom.com"
+          },
+          "remediation": "Serve RFC 8414 metadata at /.well-known/oauth-authorization-server (or OIDC discovery)."
+        },
+        {
+          "id": "C2[mcp.intercom.com]",
+          "title": "AS metadata issuer exactly matches",
+          "status": "pass",
+          "severity": "high",
+          "requirement": "MUST",
+          "message": "issuer matches the advertised authorization server",
+          "reference": {
+            "spec": "RFC 8414 §3.3",
+            "section": "3.3",
+            "url": "https://datatracker.ietf.org/doc/html/rfc8414"
+          },
+          "evidence": {
+            "expected": "https://mcp.intercom.com",
+            "got": "https://mcp.intercom.com"
           }
+        },
+        {
+          "id": "C3[mcp.intercom.com]",
+          "title": "AS metadata required fields present",
+          "status": "pass",
+          "severity": "high",
+          "requirement": "MUST",
+          "message": "all required RFC 8414 fields present",
+          "reference": {
+            "spec": "RFC 8414 §2",
+            "section": "2",
+            "url": "https://datatracker.ietf.org/doc/html/rfc8414"
+          },
+          "evidence": {
+            "missing": []
+          }
+        },
+        {
+          "id": "C4[mcp.intercom.com]",
+          "title": "PKCE S256 advertised",
+          "status": "pass",
+          "severity": "high",
+          "requirement": "MUST",
+          "message": "advertises code_challenge_methods_supported containing S256",
+          "reference": {
+            "spec": "OAuth 2.1 §7.5.2 / RFC 8414",
+            "url": "https://datatracker.ietf.org/doc/html/rfc8414"
+          },
+          "evidence": {
+            "code_challenge_methods_supported": [
+              "S256"
+            ]
+          },
+          "remediation": "Advertise and enforce PKCE with S256."
+        },
+        {
+          "id": "C5[mcp.intercom.com]",
+          "title": "All AS endpoints served over HTTPS",
+          "status": "pass",
+          "severity": "high",
+          "requirement": "MUST",
+          "message": "all advertised endpoints use https",
+          "reference": {
+            "spec": "MCP authorization §Communication Security",
+            "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization"
+          },
+          "evidence": {
+            "nonHttps": {}
+          }
+        },
+        {
+          "id": "C6[mcp.intercom.com]",
+          "title": "Client registration capability advertised",
+          "status": "pass",
+          "severity": "info",
+          "requirement": "MAY",
+          "message": "supports Dynamic Client Registration (RFC 7591; deprecated in 2026-07-28 but allowed)",
+          "reference": {
+            "spec": "MCP client-registration",
+            "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization/authorization-server-discovery"
+          },
+          "evidence": {
+            "cimd": false,
+            "dcr": true
+          }
+        },
+        {
+          "id": "C7[mcp.intercom.com]",
+          "title": "RFC 9207 issuer-response parameter supported",
+          "status": "warn",
+          "severity": "low",
+          "requirement": "SHOULD",
+          "message": "does not advertise RFC 9207 iss support (SHOULD under 2026-07-28; mix-up defense, trending to MUST)",
+          "reference": {
+            "spec": "RFC 9207 §2.3",
+            "section": "2.3",
+            "url": "https://datatracker.ietf.org/doc/html/rfc9207"
+          },
+          "evidence": {}
         },
         {
           "id": "D1",
@@ -2389,22 +2481,22 @@
         }
       ],
       "grade": {
-        "score": 37,
-        "letter": "F"
+        "score": 98,
+        "letter": "A"
       },
       "summary": {
-        "pass": 2,
-        "fail": 2,
-        "warn": 1,
-        "skip": 4,
+        "pass": 14,
+        "fail": 0,
+        "warn": 2,
+        "skip": 0,
         "error": 0,
-        "info": 2
+        "info": 1
       }
     },
     {
       "target": "https://mcp.vercel.com/",
       "origin": "https://mcp.vercel.com",
-      "timestamp": "2026-09-28T18:51:52.190Z",
+      "timestamp": "2026-10-05T19:51:28.123Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2704,7 +2796,7 @@
     {
       "target": "https://mcp.neon.tech/sse",
       "origin": "https://mcp.neon.tech",
-      "timestamp": "2026-09-28T18:51:52.880Z",
+      "timestamp": "2026-10-05T19:51:28.555Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3004,7 +3096,7 @@
     {
       "target": "https://mcp.paypal.com/mcp",
       "origin": "https://mcp.paypal.com",
-      "timestamp": "2026-09-28T18:51:53.084Z",
+      "timestamp": "2026-10-05T19:51:28.707Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3110,17 +3202,17 @@
           "status": "pass",
           "severity": "info",
           "requirement": "SHOULD",
-          "message": "present: scopes_supported, bearer_methods_supported; absent: resource_name, resource_documentation, jwks_uri, resource_signing_alg_values_supported, dpop_bound_access_tokens_required",
+          "message": "present: bearer_methods_supported; absent: scopes_supported, resource_name, resource_documentation, jwks_uri, resource_signing_alg_values_supported, dpop_bound_access_tokens_required",
           "reference": {
             "spec": "RFC 9728 §2",
             "url": "https://datatracker.ietf.org/doc/html/rfc9728"
           },
           "evidence": {
             "present": [
-              "scopes_supported",
               "bearer_methods_supported"
             ],
             "missing": [
+              "scopes_supported",
               "resource_name",
               "resource_documentation",
               "jwks_uri",
@@ -3303,7 +3395,7 @@
     {
       "target": "https://mcp.squareup.com/sse",
       "origin": "https://mcp.squareup.com",
-      "timestamp": "2026-09-28T18:51:53.995Z",
+      "timestamp": "2026-10-05T19:51:28.932Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3603,7 +3695,7 @@
     {
       "target": "https://huggingface.co/mcp",
       "origin": "https://huggingface.co",
-      "timestamp": "2026-09-28T18:51:54.183Z",
+      "timestamp": "2026-10-05T19:51:29.063Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3902,7 +3994,7 @@
     {
       "target": "https://mcp.context7.com/mcp",
       "origin": "https://mcp.context7.com",
-      "timestamp": "2026-09-28T18:51:54.562Z",
+      "timestamp": "2026-10-05T19:51:29.654Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -4116,13 +4208,13 @@
           "status": "pass",
           "severity": "info",
           "requirement": "MAY",
-          "message": "supports Dynamic Client Registration (RFC 7591; deprecated in 2026-07-28 but allowed)",
+          "message": "supports CIMD (client_id_metadata_document_supported)",
           "reference": {
             "spec": "MCP client-registration",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization/authorization-server-discovery"
           },
           "evidence": {
-            "cimd": false,
+            "cimd": true,
             "dcr": true
           }
         },
@@ -4320,7 +4412,7 @@
     {
       "target": "https://mcp.deepwiki.com/mcp",
       "origin": "https://mcp.deepwiki.com",
-      "timestamp": "2026-09-28T18:51:55.744Z",
+      "timestamp": "2026-10-05T19:51:30.565Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "public",
@@ -4490,7 +4582,7 @@
     {
       "target": "https://gitmcp.io/docs",
       "origin": "https://gitmcp.io",
-      "timestamp": "2026-09-28T18:52:16.994Z",
+      "timestamp": "2026-10-05T19:51:51.827Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "public",
@@ -4660,7 +4752,7 @@
     {
       "target": "https://mcp.globalping.dev/sse",
       "origin": "https://mcp.globalping.dev",
-      "timestamp": "2026-09-28T18:52:20.298Z",
+      "timestamp": "2026-10-05T19:51:53.256Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -4962,7 +5054,7 @@
     {
       "target": "https://mcp.webflow.com/sse",
       "origin": "https://mcp.webflow.com",
-      "timestamp": "2026-09-28T18:52:20.447Z",
+      "timestamp": "2026-10-05T19:51:53.439Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5263,7 +5355,7 @@
     {
       "target": "https://mcp.hubspot.com/anthropic",
       "origin": "https://mcp.hubspot.com",
-      "timestamp": "2026-09-28T18:52:20.807Z",
+      "timestamp": "2026-10-05T19:51:53.709Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5562,7 +5654,7 @@
     {
       "target": "https://mcp.zapier.com/api/mcp/mcp",
       "origin": "https://mcp.zapier.com",
-      "timestamp": "2026-09-28T18:52:21.231Z",
+      "timestamp": "2026-10-05T19:51:54.121Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5892,7 +5984,7 @@
     {
       "target": "https://mcp.canva.com/mcp",
       "origin": "https://mcp.canva.com",
-      "timestamp": "2026-09-28T18:52:21.438Z",
+      "timestamp": "2026-10-05T19:51:54.236Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6193,7 +6285,7 @@
     {
       "target": "https://mcp.cloudflare.com/mcp",
       "origin": "https://mcp.cloudflare.com",
-      "timestamp": "2026-09-28T18:52:21.775Z",
+      "timestamp": "2026-10-05T19:51:54.606Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6495,7 +6587,7 @@
     {
       "target": "https://mcp.close.com/mcp",
       "origin": "https://mcp.close.com",
-      "timestamp": "2026-09-28T18:52:23.359Z",
+      "timestamp": "2026-10-05T19:51:55.720Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6522,14 +6614,14 @@
           "status": "pass",
           "severity": "critical",
           "requirement": "MUST",
-          "message": "challenge advertises resource_metadata (https://mcp.close.com/.well-known/oauth-protected-resource)",
+          "message": "challenge advertises resource_metadata (https://mcp.close.com/.well-known/oauth-protected-resource/mcp)",
           "reference": {
             "spec": "RFC 9728 §5.1",
             "section": "5.1",
             "url": "https://datatracker.ietf.org/doc/html/rfc9728"
           },
           "evidence": {
-            "resource_metadata": "https://mcp.close.com/.well-known/oauth-protected-resource"
+            "resource_metadata": "https://mcp.close.com/.well-known/oauth-protected-resource/mcp"
           }
         },
         {
@@ -6550,14 +6642,14 @@
           "status": "pass",
           "severity": "critical",
           "requirement": "MUST",
-          "message": "PRM served at https://mcp.close.com/.well-known/oauth-protected-resource",
+          "message": "PRM served at https://mcp.close.com/.well-known/oauth-protected-resource/mcp",
           "reference": {
             "spec": "RFC 9728 §3",
             "section": "3",
             "url": "https://datatracker.ietf.org/doc/html/rfc9728"
           },
           "evidence": {
-            "url": "https://mcp.close.com/.well-known/oauth-protected-resource"
+            "url": "https://mcp.close.com/.well-known/oauth-protected-resource/mcp"
           },
           "remediation": "Serve RFC 9728 metadata (200 application/json) at /.well-known/oauth-protected-resource."
         },
@@ -6567,13 +6659,13 @@
           "status": "pass",
           "severity": "high",
           "requirement": "MUST",
-          "message": "resource matches the server URI (https://mcp.close.com/)",
+          "message": "resource matches the server URI (https://mcp.close.com/mcp)",
           "reference": {
             "spec": "RFC 9728 §2",
             "url": "https://datatracker.ietf.org/doc/html/rfc9728"
           },
           "evidence": {
-            "resource": "https://mcp.close.com/",
+            "resource": "https://mcp.close.com/mcp",
             "target": "https://mcp.close.com/mcp"
           }
         },
@@ -6590,7 +6682,7 @@
           },
           "evidence": {
             "authorization_servers": [
-              "https://api.close.com/"
+              "https://api.close.com"
             ]
           },
           "remediation": "Include an `authorization_servers` array with at least one issuer identifier URL (string)."
@@ -6632,24 +6724,24 @@
             "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization/authorization-server-discovery"
           },
           "evidence": {
-            "issuer": "https://api.close.com/"
+            "issuer": "https://api.close.com"
           },
           "remediation": "Serve RFC 8414 metadata at /.well-known/oauth-authorization-server (or OIDC discovery)."
         },
         {
           "id": "C2[api.close.com]",
           "title": "AS metadata issuer exactly matches",
-          "status": "fail",
+          "status": "pass",
           "severity": "high",
           "requirement": "MUST",
-          "message": "issuer mismatch: document says \"https://api.close.com\", expected \"https://api.close.com/\" (mix-up defense)",
+          "message": "issuer matches the advertised authorization server",
           "reference": {
             "spec": "RFC 8414 §3.3",
             "section": "3.3",
             "url": "https://datatracker.ietf.org/doc/html/rfc8414"
           },
           "evidence": {
-            "expected": "https://api.close.com/",
+            "expected": "https://api.close.com",
             "got": "https://api.close.com"
           }
         },
@@ -6780,12 +6872,12 @@
         }
       ],
       "grade": {
-        "score": 94,
-        "letter": "C"
+        "score": 99,
+        "letter": "A"
       },
       "summary": {
-        "pass": 13,
-        "fail": 1,
+        "pass": 14,
+        "fail": 0,
         "warn": 1,
         "skip": 0,
         "error": 0,
@@ -6795,7 +6887,7 @@
     {
       "target": "https://mcp.wix.com/sse",
       "origin": "https://mcp.wix.com",
-      "timestamp": "2026-09-28T18:52:23.622Z",
+      "timestamp": "2026-10-05T19:51:55.995Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7096,7 +7188,7 @@
     {
       "target": "https://mcp.prisma.io/mcp",
       "origin": "https://mcp.prisma.io",
-      "timestamp": "2026-09-28T18:52:23.873Z",
+      "timestamp": "2026-10-05T19:51:56.609Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7396,7 +7488,7 @@
     {
       "target": "https://mcp.buildkite.com/mcp",
       "origin": "https://mcp.buildkite.com",
-      "timestamp": "2026-09-28T18:52:23.932Z",
+      "timestamp": "2026-10-05T19:51:56.759Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7696,7 +7788,7 @@
     {
       "target": "https://mcp.simplescraper.io/mcp",
       "origin": "https://mcp.simplescraper.io",
-      "timestamp": "2026-09-28T18:52:24.604Z",
+      "timestamp": "2026-10-05T19:51:57.814Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7933,7 +8025,7 @@
     {
       "target": "https://mcp.grafana.com/mcp",
       "origin": "https://mcp.grafana.com",
-      "timestamp": "2026-09-28T18:52:24.882Z",
+      "timestamp": "2026-10-05T19:51:58.103Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8233,7 +8325,7 @@
     {
       "target": "https://mcp.monday.com/sse",
       "origin": "https://mcp.monday.com",
-      "timestamp": "2026-09-28T18:52:25.270Z",
+      "timestamp": "2026-10-05T19:51:58.527Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8536,7 +8628,7 @@
     {
       "target": "https://mcp.box.com/mcp",
       "origin": "https://mcp.box.com",
-      "timestamp": "2026-09-28T18:52:26.002Z",
+      "timestamp": "2026-10-05T19:51:59.259Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8836,7 +8928,7 @@
     {
       "target": "https://mcp.stytch.dev/mcp",
       "origin": "https://mcp.stytch.dev",
-      "timestamp": "2026-09-28T18:52:26.549Z",
+      "timestamp": "2026-10-05T19:51:59.983Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
