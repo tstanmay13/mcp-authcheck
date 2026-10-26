@@ -1,6 +1,6 @@
 {
   "summary": {
-    "scannedAt": "2026-10-19T17:53:11.288Z",
+    "scannedAt": "2026-10-26T17:47:21.980Z",
     "toolVersion": "0.1.1",
     "specVersion": "2026-07-28",
     "total": 31,
@@ -168,12 +168,12 @@
         "title": "Validates Origin header (DNS-rebinding defense)"
       },
       "E2": {
-        "pass": 1,
+        "pass": 2,
         "fail": 0,
         "warn": 0,
         "skip": 0,
         "error": 0,
-        "info": 28,
+        "info": 27,
         "title": "Rejects GET on the MCP endpoint (2026-07-28)"
       }
     }
@@ -182,7 +182,7 @@
     {
       "target": "https://mcp.linear.app/mcp",
       "origin": "https://mcp.linear.app",
-      "timestamp": "2026-10-19T17:52:26.927Z",
+      "timestamp": "2026-10-26T17:46:39.494Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -484,7 +484,7 @@
     {
       "target": "https://mcp.notion.com/mcp",
       "origin": "https://mcp.notion.com",
-      "timestamp": "2026-10-19T17:52:27.329Z",
+      "timestamp": "2026-10-26T17:46:39.721Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -786,7 +786,7 @@
     {
       "target": "https://mcp.sentry.dev/mcp",
       "origin": "https://mcp.sentry.dev",
-      "timestamp": "2026-10-19T17:52:29.080Z",
+      "timestamp": "2026-10-26T17:46:40.188Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1088,7 +1088,7 @@
     {
       "target": "https://api.githubcopilot.com/mcp/",
       "origin": "https://api.githubcopilot.com",
-      "timestamp": "2026-10-19T17:52:30.139Z",
+      "timestamp": "2026-10-26T17:46:40.923Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1389,7 +1389,7 @@
     {
       "target": "https://mcp.stripe.com/",
       "origin": "https://mcp.stripe.com",
-      "timestamp": "2026-10-19T17:52:30.560Z",
+      "timestamp": "2026-10-26T17:46:41.873Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1689,7 +1689,7 @@
     {
       "target": "https://mcp.asana.com/sse",
       "origin": "https://mcp.asana.com",
-      "timestamp": "2026-10-19T17:52:33.179Z",
+      "timestamp": "2026-10-26T17:46:42.596Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -1990,7 +1990,7 @@
     {
       "target": "https://mcp.atlassian.com/v1/sse",
       "origin": "https://mcp.atlassian.com",
-      "timestamp": "2026-10-19T17:52:33.610Z",
+      "timestamp": "2026-10-26T17:46:43.229Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2197,7 +2197,7 @@
     {
       "target": "https://mcp.intercom.com/mcp",
       "origin": "https://mcp.intercom.com",
-      "timestamp": "2026-10-19T17:52:33.871Z",
+      "timestamp": "2026-10-26T17:46:43.521Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2498,7 +2498,7 @@
     {
       "target": "https://mcp.vercel.com/",
       "origin": "https://mcp.vercel.com",
-      "timestamp": "2026-10-19T17:52:34.725Z",
+      "timestamp": "2026-10-26T17:46:45.259Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -2711,13 +2711,13 @@
           "status": "pass",
           "severity": "info",
           "requirement": "MAY",
-          "message": "supports Dynamic Client Registration (RFC 7591; deprecated in 2026-07-28 but allowed)",
+          "message": "supports CIMD (client_id_metadata_document_supported)",
           "reference": {
             "spec": "MCP client-registration",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/authorization/authorization-server-discovery"
           },
           "evidence": {
-            "cimd": false,
+            "cimd": true,
             "dcr": true
           }
         },
@@ -2798,7 +2798,7 @@
     {
       "target": "https://mcp.neon.tech/sse",
       "origin": "https://mcp.neon.tech",
-      "timestamp": "2026-10-19T17:52:35.551Z",
+      "timestamp": "2026-10-26T17:46:45.985Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3098,7 +3098,7 @@
     {
       "target": "https://mcp.paypal.com/mcp",
       "origin": "https://mcp.paypal.com",
-      "timestamp": "2026-10-19T17:52:36.181Z",
+      "timestamp": "2026-10-26T17:46:46.375Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3397,7 +3397,7 @@
     {
       "target": "https://mcp.squareup.com/sse",
       "origin": "https://mcp.squareup.com",
-      "timestamp": "2026-10-19T17:52:36.689Z",
+      "timestamp": "2026-10-26T17:46:46.822Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3697,7 +3697,7 @@
     {
       "target": "https://huggingface.co/mcp",
       "origin": "https://huggingface.co",
-      "timestamp": "2026-10-19T17:52:37.266Z",
+      "timestamp": "2026-10-26T17:46:47.210Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -3967,16 +3967,16 @@
         {
           "id": "E2",
           "title": "Rejects GET on the MCP endpoint (2026-07-28)",
-          "status": "info",
+          "status": "pass",
           "severity": "low",
           "requirement": "SHOULD",
-          "message": "GET returned 429 — 2026-07-28 removed the GET stream, so 405 is expected",
+          "message": "GET correctly rejected with 405",
           "reference": {
             "spec": "MCP streamable-http §Earlier Revisions",
             "url": "https://modelcontextprotocol.io/specification/draft/basic/transports/streamable-http"
           },
           "evidence": {
-            "status": 429
+            "status": 405
           }
         }
       ],
@@ -3985,18 +3985,18 @@
         "letter": "A"
       },
       "summary": {
-        "pass": 14,
+        "pass": 15,
         "fail": 0,
         "warn": 1,
         "skip": 0,
         "error": 0,
-        "info": 2
+        "info": 1
       }
     },
     {
       "target": "https://mcp.context7.com/mcp",
       "origin": "https://mcp.context7.com",
-      "timestamp": "2026-10-19T17:52:38.184Z",
+      "timestamp": "2026-10-26T17:46:47.985Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -4413,7 +4413,7 @@
     {
       "target": "https://mcp.deepwiki.com/mcp",
       "origin": "https://mcp.deepwiki.com",
-      "timestamp": "2026-10-19T17:52:38.493Z",
+      "timestamp": "2026-10-26T17:46:48.644Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "public",
@@ -4583,7 +4583,7 @@
     {
       "target": "https://gitmcp.io/docs",
       "origin": "https://gitmcp.io",
-      "timestamp": "2026-10-19T17:53:00.215Z",
+      "timestamp": "2026-10-26T17:47:10.537Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "public",
@@ -4753,7 +4753,7 @@
     {
       "target": "https://mcp.globalping.dev/sse",
       "origin": "https://mcp.globalping.dev",
-      "timestamp": "2026-10-19T17:53:01.814Z",
+      "timestamp": "2026-10-26T17:47:11.304Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5055,7 +5055,7 @@
     {
       "target": "https://mcp.webflow.com/sse",
       "origin": "https://mcp.webflow.com",
-      "timestamp": "2026-10-19T17:53:02.201Z",
+      "timestamp": "2026-10-26T17:47:13.503Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5356,7 +5356,7 @@
     {
       "target": "https://mcp.hubspot.com/anthropic",
       "origin": "https://mcp.hubspot.com",
-      "timestamp": "2026-10-19T17:53:03.095Z",
+      "timestamp": "2026-10-26T17:47:14.293Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5655,7 +5655,7 @@
     {
       "target": "https://mcp.zapier.com/api/mcp/mcp",
       "origin": "https://mcp.zapier.com",
-      "timestamp": "2026-10-19T17:53:04.062Z",
+      "timestamp": "2026-10-26T17:47:14.869Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -5984,7 +5984,7 @@
     {
       "target": "https://mcp.canva.com/mcp",
       "origin": "https://mcp.canva.com",
-      "timestamp": "2026-10-19T17:53:04.333Z",
+      "timestamp": "2026-10-26T17:47:15.249Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6285,7 +6285,7 @@
     {
       "target": "https://mcp.cloudflare.com/mcp",
       "origin": "https://mcp.cloudflare.com",
-      "timestamp": "2026-10-19T17:53:04.646Z",
+      "timestamp": "2026-10-26T17:47:15.698Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6587,7 +6587,7 @@
     {
       "target": "https://mcp.close.com/mcp",
       "origin": "https://mcp.close.com",
-      "timestamp": "2026-10-19T17:53:04.923Z",
+      "timestamp": "2026-10-26T17:47:16.369Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -6887,7 +6887,7 @@
     {
       "target": "https://mcp.wix.com/sse",
       "origin": "https://mcp.wix.com",
-      "timestamp": "2026-10-19T17:53:05.617Z",
+      "timestamp": "2026-10-26T17:47:16.888Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7188,7 +7188,7 @@
     {
       "target": "https://mcp.prisma.io/mcp",
       "origin": "https://mcp.prisma.io",
-      "timestamp": "2026-10-19T17:53:06.599Z",
+      "timestamp": "2026-10-26T17:47:17.614Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7488,7 +7488,7 @@
     {
       "target": "https://mcp.buildkite.com/mcp",
       "origin": "https://mcp.buildkite.com",
-      "timestamp": "2026-10-19T17:53:07.377Z",
+      "timestamp": "2026-10-26T17:47:17.961Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -7788,7 +7788,7 @@
     {
       "target": "https://mcp.simplescraper.io/mcp",
       "origin": "https://mcp.simplescraper.io",
-      "timestamp": "2026-10-19T17:53:08.482Z",
+      "timestamp": "2026-10-26T17:47:18.665Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8090,7 +8090,7 @@
     {
       "target": "https://mcp.grafana.com/mcp",
       "origin": "https://mcp.grafana.com",
-      "timestamp": "2026-10-19T17:53:09.124Z",
+      "timestamp": "2026-10-26T17:47:19.114Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8390,7 +8390,7 @@
     {
       "target": "https://mcp.monday.com/sse",
       "origin": "https://mcp.monday.com",
-      "timestamp": "2026-10-19T17:53:10.102Z",
+      "timestamp": "2026-10-26T17:47:19.914Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8693,7 +8693,7 @@
     {
       "target": "https://mcp.box.com/mcp",
       "origin": "https://mcp.box.com",
-      "timestamp": "2026-10-19T17:53:10.487Z",
+      "timestamp": "2026-10-26T17:47:20.529Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
@@ -8993,7 +8993,7 @@
     {
       "target": "https://mcp.stytch.dev/mcp",
       "origin": "https://mcp.stytch.dev",
-      "timestamp": "2026-10-19T17:53:11.288Z",
+      "timestamp": "2026-10-26T17:47:21.980Z",
       "toolVersion": "0.1.1",
       "specVersion": "2026-07-28",
       "posture": "protected",
